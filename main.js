@@ -7,8 +7,8 @@ MenuItem = electron.MenuItem,
 const spawn = require("child_process").spawn;
 const _ = require("lodash");
 const path = require('path')
-const dirName = process.pkg && process.pkg.entrypoint ? path.dirname(process.execPath) : __dirname;
-const ffmpeg = require(app.getAppPath()+'/lib/findFfmpeg')(dirName);
+//const dirName = process.pkg && process.pkg.entrypoint ? path.dirname(process.execPath) : __dirname;
+//const ffmpeg = require(app.getAppPath()+'/lib/findFfmpeg')(dirName);
 
 //app.set('ffmpegVersion', ffmpeg.version)
 //app.set('ffmpegPath', ffmpeg.path)
@@ -51,7 +51,7 @@ function spawnFfmpeg(i){
     node.kill("SIGINT");
 
   node = spawn(
-    "node",
+    "/usr/local/bin/node",
     [app.getAppPath()+"/ffmpeg-streamer",i, "production"],
     {
       cwd: process.cwd()
@@ -87,7 +87,7 @@ function createWindow() {
   tray.setToolTip('This is my application.');
   tray.setContextMenu(contextMenu);
 
-  exec( 'ffmpeg -hide_banner -f avfoundation -list_devices true -i \"\"', (err, stdout, stderr) => {
+  exec( '/usr/local/bin/ffmpeg -hide_banner -f avfoundation -list_devices true -i \"\"', (err, stdout, stderr) => {
     if (err) {
       // node couldn't execute the command
       var lines = stderr.match(/^.*([\n\r]+|$)/gm);
