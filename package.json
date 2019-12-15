@@ -9,15 +9,21 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "start": "node start-electron.js"
+    "start": "electron .",
+     "package-mac": "electron-packager . JITSlidesServer --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds --icon=jitslidesserver_256.icns"
   },
   "dependencies": {
-    "electron": "6.1.5",
+    "ffbinaries": "^1.1.4",
     "jquery": "^3.4.1",
     "keymaster": "^1.6.2",
     "lodash": "^4.17.15",
     "node": "^13.1.0",
+    "path": "^0.12.7",
     "request": "^2.88.0",
     "strip": "^3.0.0"
+  },
+  "devDependencies": {
+    "electron": "6.1.5",
+    "electron-packager": "^14.1.1"
   }
 }

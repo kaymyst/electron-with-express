@@ -2,7 +2,7 @@ node_modules/
 node.exe
 node.lib
 yarn.lock
-
+release-builds/
 
 #################
 ## Eclipse
