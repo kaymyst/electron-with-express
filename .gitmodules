@@ -1,0 +1,3 @@
+[submodule "ffmpeg-streamer"]
+	path = ffmpeg-streamer
+	url = https://github.com/kaymyst/ffmpeg-streamer.git

@@ -58,8 +58,8 @@
         // uncomment the app require below
         //app = require('electron').remote.app,
         node = spawn(
-          ".\\node_modules\\node\\bin\\node.exe",
-          ["./express-app/bin/www"],
+          "node",
+          ["./ffmpeg-streamer"],
           {
             cwd: process.cwd()
           }
