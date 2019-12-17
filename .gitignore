@@ -3,6 +3,9 @@ node.exe
 node.lib
 yarn.lock
 release-builds/
+dns_sd_bindings.node
+ffmpeg
+ffmpeg-streamer-macos
 
 #################
 ## Eclipse
